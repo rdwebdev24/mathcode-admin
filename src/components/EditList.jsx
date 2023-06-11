@@ -15,7 +15,7 @@ export const EditList = () => {
       <SimpleForm>
         <TextInput label="Question description" source="desc" />
 
-        <ArrayInput label="Options" source="opt">
+        <ArrayInput label="Options" source="options">
           <SimpleFormIterator>
             <TextInput />
           </SimpleFormIterator>

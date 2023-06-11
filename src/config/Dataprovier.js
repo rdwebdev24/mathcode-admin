@@ -1,7 +1,7 @@
 import { fetchUtils } from "react-admin";
 import simpleRestProvider from 'ra-data-simple-rest';
 
-const apiUrl = "http://localhost:4000";
+const apiUrl = "http://localhost:5001";
 
 const httpClient = async (url, options = {}) => {
   if (!options.headers) {
@@ -19,9 +19,16 @@ export const dataProvider = {
     const url = `${apiUrl}/${resource}`;
     return httpClient(url).then(({ headers, json }) => {
      console.log(json," json...");
+     var data = [];
+      json.map((item)=>{
+      var idValue = item["_id"];
+      item["id"] = idValue;
+      delete item["_id"];
+      data.push(item)
+     })
       return {
-        data: json,
-        total: json.length,
+        data: data,
+        total: data.length,
       };
     });
   },

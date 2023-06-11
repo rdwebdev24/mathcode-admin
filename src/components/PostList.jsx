@@ -11,12 +11,12 @@ export const PostList = () => {
     <List>
       <Datagrid>
         <TextField source="id" />
-        <TextField source="desc" />
-        <TextField source="corrAns" />
-        <TextField source="difficulty" />
-        <TextField source="level" />
-        <TextField source="type" />
-        <TextField source="isReviewed" />
+        <TextField label="desc" source="Ques.desc" />
+        <TextField label="corrAns" source="Ques.corrAns" />
+        <TextField label="difficulty" source="Ques.difficulty" />
+        <TextField label="level" source="Ques.level" />
+        <TextField label="type" source="Ques.type" />
+        <TextField label="isReviewed" source="Ques.isReviewed" />
         <EditButton />
       </Datagrid>
     </List>
