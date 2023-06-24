@@ -1,7 +1,7 @@
 import { fetchUtils } from "react-admin";
 import simpleRestProvider from 'ra-data-simple-rest';
 
-const apiUrl = "http://localhost:5001";
+const apiUrl = "https://mathcode.onrender.com";
 
 const httpClient = async (url, options = {}) => {
   if (!options.headers) {
