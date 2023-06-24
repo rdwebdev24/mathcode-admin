@@ -7,24 +7,26 @@ import {
   ArrayInput,
   SimpleFormIterator,
   RadioButtonGroupInput,
+  useResourceContext,
+  useRecordContext,
 } from "react-admin";
 
 export const EditList = () => {
   return (
     <Edit>
       <SimpleForm>
-        <TextInput label="Question description" source="desc" />
+        <TextInput multiline label="Question description" source="Ques.desc" />
 
-        <ArrayInput label="Options" source="options">
+        <ArrayInput label="Options" source="Ques.options">
           <SimpleFormIterator>
             <TextInput />
           </SimpleFormIterator>
         </ArrayInput>
 
-        <TextInput label="correct option" source="corrAns" />
+        <TextInput label="correct option" source="Ques.corrAns" />
 
         <SelectInput
-          source="difficulty"
+          source="Ques.difficulty"
           choices={[
             { id: "easy", name: "easy" },
             { id: "medium", name: "medium" },
@@ -32,12 +34,12 @@ export const EditList = () => {
           ]}
         />
 
-        <TextInput source="level" />
+        <TextInput source="Ques.level" />
 
-        <TextInput source="type" />
+        <TextInput source="Ques.type" />
 
         <RadioButtonGroupInput
-          source="isReviewed"
+          source="Ques.isReviewed"
           choices={[
               { id: "yes", name: "yes" },
               { id: "no", name: "no" },

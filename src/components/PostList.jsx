@@ -6,10 +6,12 @@ import {
   EditButton,
 } from "react-admin";
 
+
+
 export const PostList = () => {
   return (
     <List>
-      <Datagrid>
+      <Datagrid  >
         <TextField source="id" />
         <TextField label="desc" source="Ques.desc" />
         <TextField label="corrAns" source="Ques.corrAns" />

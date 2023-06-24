@@ -13,7 +13,7 @@ export const CreateList = () => {
   return (
     <Create>
       <SimpleForm>
-        <TextInput label="Question description" source="desc" />
+        <TextInput multiline label="Question description" source="desc" />
 
         <ArrayInput label="Options" source="options">
           <SimpleFormIterator>

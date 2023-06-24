@@ -1,11 +1,20 @@
-import { Admin, Resource, ListGuesser, EditGuesser, ShowGuesser } from 'react-admin';
-import { PostList } from './components/PostList';
+import {
+  Admin,
+  Resource,
+} from "react-admin";
+import { PostList } from "./components/PostList";
 import { dataProvider } from "./config/Dataprovier";
-import { EditList } from './components/EditList';
-import { CreateList } from './components/CreateList';
+import { EditList } from "./components/EditList";
+import { CreateList } from "./components/CreateList";
 
 export const App = () => (
-    <Admin dataProvider={dataProvider}>
-       <Resource options={{label: "problems"}} name="all" list={PostList} create={CreateList}/>
-    </Admin>
+  <Admin dataProvider={dataProvider}>
+    <Resource
+      options={{ label: "problems" }}
+      name="all"
+      list={PostList}
+      create={CreateList}
+      edit={EditList}
+    />
+  </Admin>
 );

@@ -18,7 +18,6 @@ export const dataProvider = {
   getList: (resource, params) => {
     const url = `${apiUrl}/${resource}`;
     return httpClient(url).then(({ headers, json }) => {
-     console.log(json," json...");
      var data = [];
       json.map((item)=>{
       var idValue = item["_id"];
@@ -40,4 +39,16 @@ export const dataProvider = {
     }).then(({ json }) => ({
       data: { ...params.data, id: json.id }
     }))},
+
+    getOne: async (resource, params) => {
+      return httpClient(`${apiUrl}/${resource}/${params.id}`).then(
+        ({ json }) => {
+         json.id = json._id
+         delete json._id;
+         return {
+          data:json
+         }
+        }
+      );
+    },
 };
