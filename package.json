@@ -26,6 +26,10 @@
       "react-app/jest"
     ]
   },
+  "peerDependencies": {
+    "@babel/core": "^7.0.0",
+    "react": ">=16.8.0"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
