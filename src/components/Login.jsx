@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { useLogin } from 'react-admin'
 import '../styles/login.css'
-import axios from  'axios'
+import { Loader } from './Loader'
+
 
 export const Login = () => {
-    const [loading,setLoading] = useState(false);
     const login = useLogin();
     const handleSubmit = async (e) => {
         e.preventDefault();

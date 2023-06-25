@@ -1,12 +1,9 @@
 import axios from "axios";
-import { createBrowserHistory } from "history";
 
-const url = 'http://localhost:5001'
-
-const history = createBrowserHistory();
+const url = 'https://mathcode.onrender.com'
 
 const authProvider = {
-     login: async (userData) => {
+    login: async (userData) => {
         const  headers = {
             'Access-Control-Allow-Origin': '*',
             'Content-type': 'application/json',
