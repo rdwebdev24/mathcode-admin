@@ -4,14 +4,17 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
     "@mui/material": "^5.13.6",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.4.0",
     "ra-data-simple-rest": "^4.2.7",
     "react": ">=16.8.0",
     "react-admin": "^4.2.7",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -26,10 +29,6 @@
       "react-app",
       "react-app/jest"
     ]
-  },
-  "peerDependencies": {
-    "@babel/core": "^7.0.0",
-    "react": ">=16.8.0"
   },
   "browserslist": {
     "production": [
